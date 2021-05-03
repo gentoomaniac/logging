@@ -10,14 +10,14 @@ import (
 	zlog "github.com/rs/zerolog/log"
 )
 
-type Config struct {
+type LoggingConfig struct {
 	Verbosity int  `short:"v" help:"Increase verbosity." type:"counter"`
 	Quiet     bool `short:"q" help:"Do not run upgrades."`
 	Json      bool `help:"Log as json"`
 	Debug     bool `help:"shortcut for -vvvv"`
 }
 
-func Setup(config *Config) {
+func Setup(config *LoggingConfig) {
 	if !config.Quiet {
 		if config.Debug {
 			zerolog.SetGlobalLevel(zerolog.DebugLevel)
