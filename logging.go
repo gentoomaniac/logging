@@ -10,7 +10,7 @@ import (
 	zlog "github.com/rs/zerolog/log"
 )
 
-type Config struct {
+type LoggingConfig struct {
 	Verbosity int  `short:"v" help:"Increase verbosity." type:"counter"`
 	Quiet     bool `short:"q" help:"Do not run upgrades."`
 	Json      bool `help:"Log as json"`
